@@ -2,6 +2,7 @@ import { View } from 'react-native'
 import React, { useState } from 'react'
 import { Button, Text, TextInput } from 'react-native-paper'
 import { Link, useRouter } from 'expo-router'
+import { navegarError } from '@/nav/navegacion'
 
 export default function index() {
     const [contraseña, setContraseña] =  useState("")
@@ -11,7 +12,7 @@ export default function index() {
         if(contraseña === "1234"){
             route.replace("/admin/inicio")
         }else{
-            route.push("/error")
+            navegarError(route,"contraseña incorrecta","vuelve a intentarlo")
         }
     }
   return (

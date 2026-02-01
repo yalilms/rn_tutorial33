@@ -1,9 +1,8 @@
-import { Coche } from "@/model/Types";
-import { Platform } from "react-native";
+import { Coches } from "@/model/Types";
 import axios from "axios";
 
-const IP = Platform.OS==="android"? "10.0.2.2" : "localhost"
-export async function consultarCoche():Promise<Coche>{
+const IP = "10.0.2.2"
+export async function consultarCoches():Promise<Coches>{
     const url = `http://${IP}:3000/coches`
     const respuesta = await axios.get(url)
     return respuesta.data
