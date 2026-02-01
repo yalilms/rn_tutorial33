@@ -1,25 +1,40 @@
-import { Stack, Link } from 'expo-router';
+import { View } from 'react-native'
+import React, { useState } from 'react'
+import { Button, Text, TextInput } from 'react-native-paper'
+import { Link, useRouter } from 'expo-router'
 
-import { View } from 'react-native';
+export default function index() {
+    const [contraseña, setContraseña] =  useState("")
+    const route = useRouter()
 
-import { Button } from '@/components/Button';
-import { Container } from '@/components/Container';
-import { ScreenContent } from '@/components/ScreenContent';
-
-export default function Home() {
+    function login(){
+        if(contraseña === "1234"){
+            route.replace("/admin/inicio")
+        }else{
+            route.push("/error")
+        }
+    }
   return (
-    <View className={styles.container}>
-      <Stack.Screen options={{ title: 'Home' }} />
-      <Container>
-        <ScreenContent path="app/index.tsx" title="Home"></ScreenContent>
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-          <Button title="Show Details" />
+    <View className='p-4 gap-4'>
+        <Text variant='titleLarge'>Inicio</Text>
+        <Button
+            mode='contained' 
+            onPress={()=> route.push("/invitados/catalogo")}>
+                Acceso invitado
+        </Button>
+        <TextInput 
+            mode='outlined'
+            label='contraseña'
+            secureTextEntry={true}
+            value={contraseña}
+            onChangeText={setContraseña}
+        />
+        <Button mode='contained'onPress={login}>
+            Acceso administrador
+        </Button>
+        <Link href={"/about"}>
+            <Text>Acerca de</Text>
         </Link>
-      </Container>
     </View>
-  );
+  )
 }
-
-const styles = {
-  container: 'flex flex-1 bg-white',
-};

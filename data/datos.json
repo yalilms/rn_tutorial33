@@ -1,0 +1,76 @@
+{
+  "coches": [
+    {
+      "id": 8342,
+      "marca": "Hyundai",
+      "modelo": "KONA 1.0 120 ESSENCE",
+      "color": "Blanco",
+      "año": 2019,
+      "precio": 12900
+    },
+    {
+      "id": 1905,
+      "marca": "Peugeot",
+      "modelo": "308 SW 1.6 e-HDi",
+      "color": "Gris Metalizado",
+      "año": 2015,
+      "precio": 11000
+    },
+    {
+      "id": 6721,
+      "marca": "Nissan",
+      "modelo": "Leaf 40kWh N-Connecta",
+      "color": "Blanco",
+      "año": 2019,
+      "precio": 18000
+    },
+    {
+      "id": 4459,
+      "marca": "Peugeot",
+      "modelo": "308 SW BlueHDi Allure Pack",
+      "color": "Negro",
+      "año": 2021,
+      "precio": 1600
+    },
+    {
+      "id": 9023,
+      "marca": "Opel",
+      "modelo": "Astra",
+      "color": "Azul",
+      "año": 1999,
+      "precio": 5000
+    },
+    {
+      "id": 3176,
+      "marca": "Renault",
+      "modelo": "Twingo",
+      "color": "Blanco",
+      "año": 2010,
+      "precio": 4495
+    },
+    {
+      "id": 7584,
+      "marca": "Ford",
+      "modelo": "Kuga 2.0 TDCI Trend",
+      "color": "Blanco",
+      "año": 2014,
+      "precio": 10995
+    },
+    {
+      "id": 6610,
+      "marca": "Mitsubishi",
+      "modelo": "Outlander Juro 2.2",
+      "color": "Azul Metálico",
+      "año": 2010,
+      "precio": 6995
+    },
+    {
+      "id": 2487,
+      "marca": "Mercedes-Benz",
+      "modelo": "SLK200",
+      "color": "Gris Metálico",
+      "año": 2005,
+      "precio": 11995
+    }
+  ]
+}
