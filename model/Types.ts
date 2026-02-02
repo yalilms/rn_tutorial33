@@ -3,6 +3,7 @@ export type Coche = {
     marca:string,
     modelo:string,
     año:number,
+    color:string,
     precio:number
 }
 

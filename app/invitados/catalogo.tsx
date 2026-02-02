@@ -5,9 +5,11 @@ import { router } from "expo-router";
 import { useEffect, useState } from "react";
 import { FlatList, View } from "react-native";
 import { Button, List, Text } from "react-native-paper";
+import { useCoche } from "@/store/CocheCompartido";
 
 export default function Catalogo() {
     const [listaCatalogo, setListaCatalogo] = useState<Coches>([])
+    const { coche, setCoche } = useCoche()
 
     function accionCargarcoches() {
         consultarCoches()
@@ -23,6 +25,10 @@ export default function Catalogo() {
         return <List.Item
                     title={`${coche.marca} ${coche.modelo}`}
                     left={()=> <List.Icon icon={"car"}/>}
+                    onPress={()=> {
+                        setCoche(coche)
+                        router.push("/invitados/detalle")
+                    }}
                 />
     }
 
