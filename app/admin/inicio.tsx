@@ -24,9 +24,6 @@ export default function Inicio() {
                     Borrar
                 </Button>
             </View>
-            <Button mode="contained" onPress={()=> route.replace("/")}>
-                cerrar Sesion
-            </Button>
         </View>
     );
 }
